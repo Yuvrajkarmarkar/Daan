@@ -74,7 +74,7 @@ export default function signin() {
 
               {/* right */}
               <div className='flex-1'>
-                  <img src="" alt="" />
+                  
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum distinctio id nesciunt numquam laborum sapiente at nostrum adipisci rerum beatae ullam quasi cum hic dicta optio labore sed corporis ipsum molestiae ipsa, quos praesentium totam minus. Veniam ipsum ratione, ipsa id saepe exercitationem placeat amet voluptatibus! Ex similique et fuga debitis in?</p>
                   
                 </div>
