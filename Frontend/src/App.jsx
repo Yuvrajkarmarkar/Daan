@@ -5,6 +5,7 @@ import Signin from './pages/signin'
 import Signup from './pages/signup'
 import LandingPage from './pages/landingpage'
 import Home from './pages/home'
+import Footer from './components/Footer'
 
 function App() {
    return (
@@ -16,7 +17,8 @@ function App() {
          <Route path='/signin' element={<Signin />} />
          <Route path='/signup' element={<Signup/>}/>
          
-        </Routes>
+       </Routes>
+       <Footer/>
        </BrowserRouter >
        
   )
