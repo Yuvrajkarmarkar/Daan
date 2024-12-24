@@ -1,8 +1,12 @@
 import React from 'react'
-import { Navbar } from 'flowbite-react'
+import { Avatar, Navbar } from 'flowbite-react'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 export default function navbar() {
+    const {currentUser}=useSelector(state=>state.user)
+
+
   return (
     <div>
   <Navbar className='bg-[#F9EFDB]'>
@@ -43,17 +47,29 @@ export default function navbar() {
             </Link>
                       </div>
       </div>
-      <div className='flex space-x-4'>
+          {
+            currentUser ? (
+              <Avatar alt='user' img={currentUser.photoURL}  className='cursor-pointer' ></Avatar>
+            ) : (
+                
+          <div className='flex space-x-4'>
+
+              
+
                       <div className='p-2 border-4 border-green-600 rounded-full  hover:bg-green-600 hover:text-black' >
                           <Link to='/signin'>
                           Login
                           </Link>        
                       </div>
-                      <div className='bg-green-600 p-2 rounded-full'>
+                     
+                    <div className='bg-green-600 p-2 rounded-full'>
                           <Link to='/signup'>
                           Sign up
                           </Link></div>
         </div>
+            )
+              }
+
     </div>
   </Navbar>
 </div>
