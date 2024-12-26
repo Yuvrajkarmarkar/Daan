@@ -49,7 +49,7 @@ export default function navbar() {
       </div>
           {
             currentUser ? (
-              <Avatar alt='user' img={currentUser.photoURL}  className='cursor-pointer' ></Avatar>
+              <Avatar alt='user' img={currentUser.photoURL}  className='cursor-pointer' rounded ></Avatar>
             ) : (
                 
           <div className='flex space-x-4'>

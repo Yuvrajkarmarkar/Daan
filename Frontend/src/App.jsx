@@ -6,6 +6,8 @@ import Signup from './pages/signup'
 import LandingPage from './pages/landingpage'
 import Home from './pages/home'
 import Footer from './components/Footer'
+import Options from './pages/option'
+import Food from './pages/food'
 
 function App() {
    return (
@@ -15,7 +17,9 @@ function App() {
          <Route path='/' element={<LandingPage />} />
          <Route path='/home' element={<Home />} />
          <Route path='/signin' element={<Signin />} />
-         <Route path='/signup' element={<Signup/>}/>
+         <Route path='/signup' element={<Signup />} />
+         <Route path='/option' element={<Options />} />
+         <Route path='/food' element={<Food/>}/>
          
        </Routes>
        <Footer/>
