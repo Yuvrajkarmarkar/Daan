@@ -1,8 +1,7 @@
 
 
 import { HandCoins } from 'lucide-react'
-import Link from "next/link"
-import { useState } from 'react'
+import {Link} from "react-router-dom"
 
 export default function MoneyDonationPage() {
   
@@ -10,7 +9,7 @@ export default function MoneyDonationPage() {
   return (
     <div className="max-w-2xl mx-auto p-6">
       <Link 
-        href="/"
+        to="/donate"
         className="text-emerald-600 hover:text-emerald-700 inline-flex items-center mb-6"
       >
         ← Back to categories
@@ -20,15 +19,14 @@ export default function MoneyDonationPage() {
           <HandCoins className="w-8 h-8 text-emerald-600" />
           <h1 className="text-2xl font-bold">Donate Money</h1>
         </div>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form  className="space-y-4">
           <div>
             <label htmlFor="amount" className="block text-sm font-medium mb-2">Amount</label>
             <input
               type="number"
               id="amount"
               name="amount"
-              value={formData.amount}
-              onChange={handleChange}
+              
               placeholder="Enter amount"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
@@ -39,8 +37,7 @@ export default function MoneyDonationPage() {
               type="text"
               id="currency"
               name="currency"
-              value={formData.currency}
-              onChange={handleChange}
+              
               placeholder="e.g., USD, EUR"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
@@ -51,8 +48,7 @@ export default function MoneyDonationPage() {
               type="text"
               id="paymentMethod"
               name="paymentMethod"
-              value={formData.paymentMethod}
-              onChange={handleChange}
+              
               placeholder="e.g., Credit Card, PayPal"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
@@ -62,8 +58,7 @@ export default function MoneyDonationPage() {
             <textarea
               id="message"
               name="message"
-              value={formData.message}
-              onChange={handleChange}
+              
               placeholder="Add a message with your donation"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 h-32"
             ></textarea>

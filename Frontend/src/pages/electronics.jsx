@@ -1,6 +1,6 @@
 
 import { Laptop } from 'lucide-react'
-import Link from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 export default function ElectronicsDonationPage() {
@@ -9,7 +9,7 @@ export default function ElectronicsDonationPage() {
   return (
     <div className="max-w-2xl mx-auto p-6">
       <Link 
-        href="/"
+        to="/donate"
         className="text-emerald-600 hover:text-emerald-700 inline-flex items-center mb-6"
       >
         ← Back to categories
@@ -19,15 +19,14 @@ export default function ElectronicsDonationPage() {
           <Laptop className="w-8 h-8 text-emerald-600" />
           <h1 className="text-2xl font-bold">Donate Electronics</h1>
         </div>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form  className="space-y-4">
           <div>
             <label htmlFor="deviceType" className="block text-sm font-medium mb-2">Device Type</label>
             <input
               type="text"
               id="deviceType"
               name="deviceType"
-              value={formData.deviceType}
-              onChange={handleChange}
+              
               placeholder="e.g., Laptop, Phone, Tablet"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
@@ -38,8 +37,7 @@ export default function ElectronicsDonationPage() {
               type="text"
               id="brandModel"
               name="brandModel"
-              value={formData.brandModel}
-              onChange={handleChange}
+              
               placeholder="e.g., Apple MacBook Pro 2019"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
@@ -50,8 +48,7 @@ export default function ElectronicsDonationPage() {
               type="text"
               id="condition"
               name="condition"
-              value={formData.condition}
-              onChange={handleChange}
+              
               placeholder="e.g., Working, Needs repair"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
@@ -62,8 +59,7 @@ export default function ElectronicsDonationPage() {
               type="text"
               id="age"
               name="age"
-              value={formData.age}
-              onChange={handleChange}
+              
               placeholder="e.g., 2 years"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
@@ -74,8 +70,7 @@ export default function ElectronicsDonationPage() {
               type="text"
               id="address"
               name="address"
-              value={formData.address}
-              onChange={handleChange}
+              
               placeholder="Enter the address for electronics collection"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
@@ -85,8 +80,7 @@ export default function ElectronicsDonationPage() {
             <textarea
               id="additionalNotes"
               name="additionalNotes"
-              value={formData.additionalNotes}
-              onChange={handleChange}
+              
               placeholder="Any specific details about the device"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 h-32"
             ></textarea>

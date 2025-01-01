@@ -22,7 +22,7 @@ export default function Option() {
           <button
             key={category.name}
             className="p-8 border-2 border-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors duration-200 flex flex-col items-center gap-3"
-            onClick={() => navigate(`/${category.name.toLowerCase()}`)}
+            onClick={() => navigate(`/donate/${category.name.toLowerCase()}`)}
           >
             <category.icon className="w-12 h-12 text-emerald-600" strokeWidth={1.5} />
             <span className="text-gray-800 font-medium">{category.name}</span>

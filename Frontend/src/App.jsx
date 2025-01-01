@@ -8,6 +8,11 @@ import Home from './pages/home'
 import Footer from './components/Footer'
 import Options from './pages/option'
 import Food from './pages/food'
+import Toys from './pages/toys'
+import Stationary from './pages/stationary'
+import Clothes from './pages/clothes'
+import Electronics from './pages/electronics'
+import Money from './pages/money'
 
 function App() {
    return (
@@ -18,8 +23,14 @@ function App() {
          <Route path='/home' element={<Home />} />
          <Route path='/signin' element={<Signin />} />
          <Route path='/signup' element={<Signup />} />
-         <Route path='/option' element={<Options />} />
-         <Route path='/food' element={<Food/>}/>
+         <Route path='/donate' element={<Options />} />
+         <Route path='/donate/food' element={<Food />} />
+         <Route path='/donate/toys' element={<Toys />} />
+         <Route path='/donate/clothes' element={<Clothes />} />
+         <Route path='/donate/money' element={<Money />} />
+         <Route path='/donate/electronics' element={<Electronics />} />
+         <Route path='/donate/stationary' element={<Stationary />} />
+         
          
        </Routes>
        <Footer/>

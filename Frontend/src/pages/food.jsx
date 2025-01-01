@@ -10,7 +10,7 @@ export default function FoodDonationPage() {
   return (
     <div className="max-w-2xl mx-auto p-6">
       <Link 
-        to="/option"
+        to="/donate"
         className="text-emerald-600 hover:text-emerald-700 inline-flex items-center mb-6"
       >
         ← Back to categories
